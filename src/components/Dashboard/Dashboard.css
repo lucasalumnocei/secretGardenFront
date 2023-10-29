@@ -1,0 +1,148 @@
+/*Designed to make the content of the Dashboard component well-structured and enjoyable.*/
+.dashboard-container {
+  max-width: 800px;  /* Limit the maximum width of the container to 800 pixels. */
+  margin: 40px auto; /* Center the container horizontally with 40px of margin on top and bottom. */
+  padding: 20px;/* Add 20px of padding inside the container. */
+  border-radius: 5px; /* Apply a rounded border with a radius of 5 pixels. */
+  background-color: #f9f9f9d8; /* Set the background color with a semi-transparent gray.*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle elevation effect. */
+  overflow-y: auto; /* Enable vertical scrolling if the content overflows the container. */
+
+}
+
+
+  
+  .dashboard-container h1 {
+    font-size: 28px; /* Larger size */
+    margin-bottom: 30px; /* Additional spacing at the bottom */
+    color: #007bff; /* Title color */
+  }
+  
+
+/*This part are applied to form input fields and textareas within the "dashboard-container."*/
+  .dashboard-container input[type="text"],
+  .dashboard-container input[type="file"],
+  .dashboard-container textarea {
+    width: 100%;
+    margin-bottom: 20px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /*These styles are applied to buttons inside the container,*/
+  .dashboard-container button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.2s; /* Adds a smooth transition to the background of the button */
+  }
+  
+/* Change the background color when hovered */
+  .dashboard-container button:hover {
+    background-color: #1e7e34;
+  }
+  
+  
+  .dashboard-container ul {
+    list-style: none;/*This property removes the default list-style from the list items within the ul element*/
+    padding: 0; /*It removes any spacing or padding that might be present by default.*/
+  }
+
+  /* Additional spacing at the bottom of each item */
+  .dashboard-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; 
+  }
+  
+  /*We setting the text to bold, and ensuring that long words or text content can wrap onto the next line*/
+  .dashboard-container span {
+    flex: 1;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+
+  /*We aligned text to the left, removing top margin, and using a slightly darker text color to improve the layout control.*/
+  .dashboard-container p {
+    flex: 3;
+    text-align: left;
+    margin-top: 0;
+    color: #333; 
+  }
+  
+  /* We've styled the "Edit" and "Delete" buttons*/
+  .dashboard-container .edit-button {
+    background-color: #ffc107; /* yellow */
+  }
+  .dashboard-container .delete-button {
+    background-color: #dc3545; /* red */
+    margin-left: 10px;
+  }
+  
+  .dashboard-container .edit-button:hover,
+  .dashboard-container .delete-button:hover {
+    filter: brightness(0.8); /* Reduces brightness when hovering */
+  }
+  
+
+
+  .dashboard-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Additional spacing at the bottom of each item */
+    
+  }
+  
+  .dashboard-container .item-container {
+    flex: 1; /* We have made the container occupy an equal part of the available space */
+    max-width: 200px; /* We define the maximum width for the container */
+    
+  }
+  /* We style the table rows on hover */
+.dashboard-container tbody tr:hover {
+  background-color: #e0e0e0; /* Changes the background color when you hover the mouse */
+  cursor: pointer; /* Changes the cursor to a link indicator on hover */
+}
+
+/* We style the table rows on hover */
+.dashboard-container tbody tr:hover {
+  background-color: #e0e0e0; /* We change the background color when you hover the mouse */
+  cursor: pointer; /* We change the cursor to a link indicator on hover */
+}
+
+/* We style the selected line */
+.dashboard-container tbody tr.selected {
+  background-color: #b3d7ff; /* We change the background color of the selected line */
+}
+
+
+  
+  .dashboard-container p {
+    white-space: normal; /* Allows the text to automatically break to the next line */
+    word-wrap: break-word; /* Breaks words that do not fit in the width of the element */
+    overflow: hidden; /* Hides any content that exceeds the size of the <li> */
+    color: #333; 
+  }
+  
+
+  .dashboardBackground {
+/* Makes the image fixed on the screen */
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    
+  }
+  
+  .h1{
+    display: flex;
+    text-align: center;
+    
+  } 

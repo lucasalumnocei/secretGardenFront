@@ -1,0 +1,53 @@
+/* We define the styling for the container of the registration form.
+   It centers the form vertically and horizontally on the page. */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Styling for the registration form itself.
+   It sets the maximum width, adds padding, and creates a border and background color. */
+  .register-form {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Styling for labels in the form.
+   It displays them as block elements with some margin at the bottom. */
+  .register-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+
+  /* Styling for text, email, and password input fields in the form.
+   It sets their width, adds margin at the bottom, and defines border and border-radius. */
+  .register-form input[type="text"],
+  .register-form input[type="email"],
+  .register-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+
+  /* Styling for the submit button.
+   It defines the background color, text color, border, padding, and cursor type. */
+  .register-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  

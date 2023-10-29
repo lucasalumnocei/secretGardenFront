@@ -1,0 +1,143 @@
+/*We're targeting the html and body elements. 
+We set their height to 100% to fill the entire viewport, remove margin and padding, enable a vertical scrollbar when necessary,
+and apply a background color."*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  background-color: #efd0c2a5; /* Adicione uma barra de rolagem vertical se necessário */
+}
+/*We centered the content basically*/
+  .content-section {
+    text-align: center;
+  }
+  
+  .content-section h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .content-section p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+ /*We added some styles to our nav*/
+nav {
+    background-color: #333;
+    color: white;
+    padding: 25px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  /* Style for navigation links */
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+/* Style for the Login component */
+  .login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+/* Style for the Register component */
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%; /* Set to 100% to occupy the entire width of the screen */
+  }
+  
+ /* Style for the Dashboard component */
+  .dashboard-container {
+    padding: 20px;
+  }
+  
+  
+  .secretgardenTitle {
+    background-color: rgb(6, 9, 8); /* We add a transparency to the background */
+    text-align: center;
+    padding: 20px; /* Add some space around the title */
+    color: white; 
+  }
+
+
+.secretgardenTitle h1 {
+  font-size: 6rem; /* Larger size for the title */
+}
+.imageHome{
+    background-size: cover;
+    display: flex;
+    position: relative;
+    size: 100px;
+    overflow-y:hidden;
+    max-width: 100%; /* We set the maximum size to 100% of the width of the parent container */
+  
+  }
+
+  /*Descrption styles*/
+  .description {
+    font-size: 1.2rem; 
+    color: #333; 
+    margin: 10px 0;
+    text-align: center; 
+  }
+  
+  /* To center the image horizontally */
+  .image {
+    text-align: center;
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 20%; /* Adjusts the size of the image to fit in the container */
+  /* Maintains the aspect ratio */
+    margin: 20px;
+  }
+  
+
+  .howtoUse{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-list {
+    padding: 25px;
+    background-color: #333;
+    color: white;
+    list-style: none;
+  }
+  
+  .user-dropdown {
+    float: right;
+  }
+  

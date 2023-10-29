@@ -1,0 +1,68 @@
+
+
+/*This style block is applied to a container that surrounds the login form. 
+It defines the container as a flexible area that is centered vertically and horizontally on the screen*/
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  }
+  
+  /*This style block I applied to the login form inside the container. 
+  It defines the form with a maximum width of 300 pixels (max-width: 300px;), adds an internal spacing of 20 pixels 
+  (padding: 20px;), creates a solid border of 1 pixel with gray color (border: 1px solid #ccc;), 
+  rounds the corners of the form (border-radius: 5px;) and sets the background of the form to light gray
+  (background-color: #f9f9f9;) with centered text (text-align: center;).*/
+  .login-form {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+
+/* This style block is applied to label tags within the login form.
+It sets the label tags to be displayed as blocks (display: block;) 
+and adds an extra space at the bottom of 10 pixels creating a gap between 
+the tags and the input fields in the form.*/
+  .login-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+/*This style block is applied to the text and password input fields in the login form.
+It sets these input fields to occupy 100% of the width of the parent container
+It also adds an extra space at the bottom of 10 pixels, creates a solid border of 1 pixel in gray,
+and rounds off the corners of the input fields.*/
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+
+/*This style block is applied to the "Submit" button on the login form.
+It defines the button with a standard blue background that 
+I decided to keep, white text, removes the border, rounds off the corners of the button 
+and defines an internal spacing of 10 pixels vertically and 20 pixels horizontally (padding: 10px 20px;),
+and defines the cursor to look like a hand (cursor: pointer;),
+indicating that the button is clickable. 
+This makes it easier for the user to see that they can interact there.*/
+  .login-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+
