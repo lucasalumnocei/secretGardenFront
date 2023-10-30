@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
 
 function Register() {
@@ -11,6 +12,8 @@ function Register() {
   };
   const BACKEND_URL =
     process.env.VITE_BACKEND_URL
+  
+    const navigate = useNavigate();
 
   // We create a state variable formData to store form input values
   const [formData, setFormData] = useState({
@@ -51,7 +54,7 @@ function Register() {
           alert('Existing user, try another email');
         } else {
           alert('User created, redirecting to login');
-          location.replace('/login');
+          navigate('/login');
         }
       })
       .catch((error) => {
