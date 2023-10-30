@@ -1,7 +1,7 @@
 {
-  "name": "client",
+  "name": "secret-garden-front-end",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "clean": "vite clean",
@@ -32,5 +32,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.4.5"
+  },
+  "engines": {
+    "node": "17.9.1"
   }
 }
