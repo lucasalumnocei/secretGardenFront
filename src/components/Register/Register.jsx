@@ -6,7 +6,7 @@ import styles from './Register.module.css';
 function Register() {
   // We define the backgroundStyle object to set the background image
   const backgroundStyle = {
-    backgroundImage: 'url("../../../public/leafs.png")', // My backgroundImage at the public folder
+    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',// My backgroundImage at the public folder
     backgroundSize: 'cover', // Makes the background image responsive
     backgroundRepeat: 'no-repeat',
   };

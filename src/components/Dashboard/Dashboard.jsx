@@ -7,7 +7,7 @@ import './Dashboard.css'; // Imported a CSS file for styling the Dashboard compo
 //// Define a background style object for the dashboard.
 function Dashboard() {
   const backgroundStyle = {
-    backgroundImage: 'url("../../../public/leafs.png")',
+    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };

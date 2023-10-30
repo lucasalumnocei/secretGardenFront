@@ -17,7 +17,7 @@ function App() {
 
   // This function is called when the user clicks the "Logout" button.
   function handleLogout() {
-  // We remove user-related cookies and reset the states.
+    // We remove user-related cookies and reset the states.
     Cookies.remove('user');
     Cookies.remove('isLoggedIn');
     setIsLoggedIn(false);
@@ -26,11 +26,13 @@ function App() {
 
   useEffect(() => {
     if (!user || !isLoggedIn) {
-    // We check for user and isLoggedIn cookies, and if they exist, we update our states.
-    const userCookie = Cookies.get('user') ? JSON.parse(Cookies.get('user')) : null;
-    const isLoggedIn = Cookies.get('isLoggedIn')
-      ? Cookies.get('isLoggedIn')
-      : false;
+      // We check for user and isLoggedIn cookies, and if they exist, we update our states.
+      const userCookie = Cookies.get('user')
+        ? JSON.parse(Cookies.get('user'))
+        : null;
+      const isLoggedIn = Cookies.get('isLoggedIn')
+        ? Cookies.get('isLoggedIn')
+        : false;
       setUser(userCookie);
       setIsLoggedIn(isLoggedIn);
     }
@@ -50,7 +52,7 @@ function App() {
                 <Link to='/register'>Register</Link>
               </li>
             ) : null}
-             {/* If the user is logged in, show "Dashboard" and "Logout" links */}
+            {/* If the user is logged in, show "Dashboard" and "Logout" links */}
             {isLoggedIn ? (
               <>
                 <li>
@@ -95,10 +97,17 @@ function App() {
         </div>
         <div className='containerImgandTitle'>
           <div className='image'>
-            <img src='../public/fairyTale.jpeg' alt='Imagem' />
-            <img src='../public/it.jpeg' alt='Imagem' />
-            <img src='../public/holy.jpeg' alt='Imagem' />
-            <img src='../public/billySummers.jpeg' alt='Imagem' />
+            <img
+              src='https://i.ibb.co/BBDJQYz/fairy-Tale.jpg'
+              alt='fairy-Tale'
+              border='0'
+            />
+            <img src='https://i.ibb.co/Q6fGJVD/it.jpg' alt='it' border='0' />
+            <img
+              src='https://i.ibb.co/xF3NV6y/holy.png'
+              alt='holy'
+              border='0'
+            />
           </div>
         </div>
 
@@ -119,10 +128,7 @@ function App() {
               />
             }
           />
-          <Route
-            path='/dashboard'
-            element={<Dashboard/>}
-          />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

@@ -5,7 +5,7 @@ import './Home-style.css';
 /*I chose an image to be the background in Login/Registration/Home.
  This image hardly appears on the home page. */
 const backgroundStyle = {
-  backgroundImage: 'url("../../../public/leafs.png")',
+  backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',
   height: '100%',
   width: '100%',
 };

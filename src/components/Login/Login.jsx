@@ -15,7 +15,7 @@ to define the background of the component, to include a new learning I had these
 and apply it here in the project. In this case, it defines a background image*/
 function Login({ isLoggedIn, setIsLoggedIn, setUser }) {
   const backgroundStyle = {
-    backgroundImage: 'url("../../../public/leafs.png")',
+    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
