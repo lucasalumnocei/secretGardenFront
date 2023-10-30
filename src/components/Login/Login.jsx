@@ -19,9 +19,15 @@ function Login({ isLoggedIn, setIsLoggedIn, setUser }) {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
+  const axiosHeaders = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+  };
 
   const BACKEND_URL =
-    process.env.VITE_BACKEND_URL + ':' + process.env.VITE_BACKEND_PORT;
+    process.env.VITE_BACKEND_URL;
 
   const navigate = useNavigate();
   // If the user is already logged in, navigate to the dashboard.
@@ -57,7 +63,7 @@ function Login({ isLoggedIn, setIsLoggedIn, setUser }) {
       .post(`${BACKEND_URL}/api/login`, {
         email: formData.email,
         password: formData.password,
-      })
+      }, axiosHeaders)
       .then((result) => {
         let userData = JSON.stringify(result.data.user);
         Cookies.set('user', userData, { expires: 1 });

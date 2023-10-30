@@ -11,9 +11,15 @@ function Dashboard() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
+  const axiosHeaders = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+  };
 
   const BACKEND_URL =
-    process.env.VITE_BACKEND_URL + ':' + process.env.VITE_BACKEND_PORT;
+    process.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
   // Component states to control the item list and input fields.
   const [items, setItems] = useState([]); // List of items
@@ -92,7 +98,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
   // Asynchronously send a POST request to the server with the new item data.
   async function saveItem(newItem) {
     return await axios
-      .post(`${BACKEND_URL}/api/dashboard/items`, newItem)
+      .post(`${BACKEND_URL}/api/dashboard/items`, newItem, axiosHeaders)
       .then((response) => {
         console.log(
           // If the request is successful, log a message and return the ID of the newly added item.
@@ -139,7 +145,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
   async function recoverUserItems() {
     const user = Cookies.get('user') ? JSON.parse(Cookies.get('user')) : null;
     await axios
-      .get(`${BACKEND_URL}/api/dashboard/items/${user.id}`)
+      .get(`${BACKEND_URL}/api/dashboard/items/${user.id}`, axiosHeaders)
       .then((response) => {
         /// If the request is successful, log a message and update the component's state with the retrieved items.
         console.log('User items recovered successfully:', response.data);
@@ -158,7 +164,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
   // Asynchronously delete a user's item with the provided ID.
   async function deleteUserItems(itemId) {
     return await axios
-      .delete(`${BACKEND_URL}/api/dashboard/items/${itemId}`)
+      .delete(`${BACKEND_URL}/api/dashboard/items/${itemId}`, axiosHeaders)
       .then((response) => {
         // If the deletion request is successful, log a message and return the response data.
         console.log('User items deleted successfully:', response.data);
@@ -174,7 +180,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
     return await axios
       .patch(
         `${BACKEND_URL}/api/dashboard/items/${updatedItem.id}`,
-        updatedItem
+        updatedItem, axiosHeaders
       )
       .then((response) => {
         // If the update request is successful, log a message and return the response data.

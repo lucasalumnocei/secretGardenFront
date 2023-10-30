@@ -10,7 +10,7 @@ function Register() {
     backgroundRepeat: 'no-repeat',
   };
   const BACKEND_URL =
-    process.env.VITE_BACKEND_URL + ':' + process.env.VITE_BACKEND_PORT;
+    process.env.VITE_BACKEND_URL
 
   // We create a state variable formData to store form input values
   const [formData, setFormData] = useState({
@@ -18,6 +18,13 @@ function Register() {
     email: '',
     password: '',
   });
+
+  const axiosHeaders = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+  };
 
   /* We handle changes in form inputs. We extract the name and value properties
  from the event target and update the formData state object.*/
@@ -38,7 +45,7 @@ function Register() {
         name: formData.name.trim(),
         email: formData.email.trim(),
         password: formData.password,
-      })
+      }, axiosHeaders)
       .then((res) => {
         if (res.data.status == '1') {
           alert('Existing user, try another email');
