@@ -96,18 +96,11 @@ function App() {
           </p>
         </div>
         <div className='containerImgandTitle'>
-          <div className='image'>
-            <img
-              src='https://i.ibb.co/BBDJQYz/fairy-Tale.jpg'
-              alt='fairy-Tale'
-              border='0'
-            />
-            <img src='https://i.ibb.co/Q6fGJVD/it.jpg' alt='it' border='0' />
-            <img
-              src='https://i.ibb.co/xF3NV6y/holy.png'
-              alt='holy'
-              border='0'
-            />
+        <div className='image'>
+          <img src="https://i.ibb.co/BBDJQYz/fairy-Tale.jpg" alt="fairy-Tale" border="0"/>
+          <img src="https://i.ibb.co/Q6fGJVD/it.jpg" alt="it" border="0"/>
+          <img src="https://i.ibb.co/xF3NV6y/holy.png" alt="holy" border="0"/>
+          <img src="https://i.ibb.co/XyCQN9D/billy-Summers-co-pia.png" alt="billy-Summers-co-pia" border="0"/>
           </div>
         </div>
 
