@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 
-
 /*
 We use (props) to pass information from a parent component to a child component.
 We used backgroundStyle, which is an object that contains CSS styles
@@ -20,6 +19,8 @@ function Login({ isLoggedIn, setIsLoggedIn, setUser }) {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
+
+  const BACKEND_URL = process.env.VITE_BACKEND_URL;
 
 
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ function Login({ isLoggedIn, setIsLoggedIn, setUser }) {
   If successful, it sets user data in cookies, updates the isLoggedIn state, and navigates to the dashboard.*/
   async function clickLoginButton(e) {
     e.preventDefault();
-    axios.post("http://localhost:3000/api/login", {
+    axios.post(`${BACKEND_URL}/api/login`, {
       email: formData.email,
       password: formData.password
     }).then((result) => {

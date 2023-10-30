@@ -10,6 +10,7 @@ function Register() {
     backgroundSize: 'cover', // Makes the background image responsive
     backgroundRepeat: 'no-repeat',
   };
+const BACKEND_URL = process.env.VITE_BACKEND_URL;
   
 
 // We create a state variable formData to store form input values
@@ -33,19 +34,19 @@ function handleChange(e){
 // If the user is successfully registered, they are redirected to the login page.
 function handleSubmit(e){
    e.preventDefault();
-   axios.post('http://localhost:3000/api/register',
+   axios.post(`${BACKEND_URL}/api/register`,
    { name:formData.name.trim(),
-    email:formData.email.trim(),
-    password:formData.password}).then(res=>{
-        if(res.data.status == "1"){
-            alert("Existing user, try another email");
-        }else{
-            alert("User created, redirecting to login");
-            location.replace('/login');
-        }
-    }).catch(error=>{
-        console.log("Error in the request:"+error);
-    })
+  email:formData.email.trim(),
+  password:formData.password}).then(res=>{
+    if(res.data.status == "1"){
+      alert("Existing user, try another email");
+    }else{
+      alert("User created, redirecting to login");
+      location.replace('/login');
+    }
+  }).catch(error=>{
+    console.log("Error in the request:"+error);
+  })
 }
 
 // This is the component's return section, rendering the registration form.

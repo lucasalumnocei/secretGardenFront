@@ -8,7 +8,6 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import './styles.css';
 
-
 /*I used the useState Hooks to create two states: isLoggedIn (to track whether the user is logged in)
 and user (to store user information). 
 Both start as false and null, respectively. */

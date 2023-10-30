@@ -11,7 +11,7 @@ We select the HTML element with the id of 'root' for this purpose
 
 And finally,we're telling React to render our App component inside that reserved 'root' element.
 */
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -13,6 +13,7 @@ function Dashboard() {
     backgroundRepeat: 'no-repeat',
   };
 
+  const BACKEND_URL = process.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
 // Component states to control the item list and input fields.
   const [items, setItems] = useState([]);// List of items
@@ -91,7 +92,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
   // Asynchronously send a POST request to the server with the new item data.
   async function saveItem(newItem) {
     return await axios
-      .post('http://localhost:3000/api/dashboard/items', newItem)
+      .post(`${BACKEND_URL}/api/dashboard/items`, newItem)
       .then((response) => {
         console.log( // If the request is successful, log a message and return the ID of the newly added item.
           'Form data sent successfully to the server:',
@@ -136,7 +137,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
   async function recoverUserItems() {
     const user = Cookies.get('user') ? JSON.parse(Cookies.get('user')) : null;
     await axios
-      .get(`http://localhost:3000/api/dashboard/items/${user.id}`)
+      .get(`${BACKEND_URL}/api/dashboard/items/${user.id}`)
       .then((response) => {/// If the request is successful, log a message and update the component's state with the retrieved items.
         console.log('User items recovered successfully:', response.data);
         if (response.data.items.length > 0) {
@@ -153,7 +154,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
 // Asynchronously delete a user's item with the provided ID.
   async function deleteUserItems(itemId) {
     return await axios
-      .delete(`http://localhost:3000/api/dashboard/items/${itemId}`)
+      .delete(`${BACKEND_URL}/api/dashboard/items/${itemId}`)
       .then((response) => {// If the deletion request is successful, log a message and return the response data.
         console.log('User items deleted successfully:', response.data);
         return response.data;
@@ -166,7 +167,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
   async function updateUserItems(updatedItem) {
     return await axios
       .patch(
-        `http://localhost:3000/api/dashboard/items/${updatedItem.id}`,
+        `${BACKEND_URL}/api/dashboard/items/${updatedItem.id}`,
         updatedItem
       )
       .then((response) => {// If the update request is successful, log a message and return the response data.
