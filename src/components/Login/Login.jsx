@@ -58,9 +58,9 @@ function Login({ isLoggedIn, setIsLoggedIn, setUser }) {
   It sends a POST request to the server with the user's email and password.
   If successful, it sets user data in cookies, updates the isLoggedIn state, and navigates to the dashboard.*/
   async function clickLoginButton(e) {
-    e.preventDefault();
+    e.preventDefault();//the page will not be reloaded when the button is clicked.
     axios
-      .post(`${BACKEND_URL}/api/login`, {
+      .post(`${BACKEND_URL}/api/login`, {//data sent in the POST request includes an object with the properties email and password
         email: formData.email,
         password: formData.password,
       }, axiosHeaders)

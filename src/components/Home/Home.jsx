@@ -1,9 +1,8 @@
 //The imports I've made so that you can use the tools below.
-import React from 'react';
 import './Home-style.css';
 
 /*I chose an image to be the background in Login/Registration/Home.
- This image hardly appears on the home page. */
+ This image hardly appears on the home page.*/
 const backgroundStyle = {
   backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',
   height: '100%',
@@ -12,7 +11,7 @@ const backgroundStyle = {
 
 /*Here we created a div with an image to cover the entire screen,
  a title with H3 and also a footer with 3 different sections with
-  a title and description of how The Secret Garden works. */
+  a title and description of how The Secret Garden works.*/
 function Home() {
   return (
     <div style={backgroundStyle}>

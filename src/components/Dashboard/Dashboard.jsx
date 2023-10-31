@@ -7,7 +7,7 @@ import './Dashboard.css'; // Imported a CSS file for styling the Dashboard compo
 //// Define a background style object for the dashboard.
 function Dashboard() {
   const backgroundStyle = {
-    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',
+    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',//// Image where were uploaded to the https://es.imgbb.com/ website.
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
@@ -18,6 +18,8 @@ function Dashboard() {
     }
   };
 
+    /*The BACKEND_URL constant helps me with the application's execution environment.
+   So the BACKEND_URL will contain the URL of the backend to which the requests will be made. */
   const BACKEND_URL =
     process.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
@@ -141,7 +143,7 @@ Add the 'newItem' to the 'items' array in the component's state.*/
     setItemDescription(items[index].description);
   }
 
-  // Asynchronously recover the user's items from the server.
+ // Make an asynchronous GET request to the backend API to retrieve user items
   async function recoverUserItems() {
     const user = Cookies.get('user') ? JSON.parse(Cookies.get('user')) : null;
     await axios

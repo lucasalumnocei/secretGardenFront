@@ -6,14 +6,17 @@ import styles from './Register.module.css';
 function Register() {
   // We define the backgroundStyle object to set the background image
   const backgroundStyle = {
-    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',// My backgroundImage at the public folder
+    backgroundImage: 'url("https://i.ibb.co/RgBctHL/leafs-co-pia.png")',// Image where were uploaded to the https://es.imgbb.com/ website.
     backgroundSize: 'cover', // Makes the background image responsive
     backgroundRepeat: 'no-repeat',
   };
+
+  /*The BACKEND_URL constant helps me with the application's execution environment.
+   So the BACKEND_URL will contain the URL of the backend to which the requests will be made. */
   const BACKEND_URL =
-    process.env.VITE_BACKEND_URL
+    process.env.VITE_BACKEND_URL//
   
-    const navigate = useNavigate();
+    const navigate = useNavigate();//used to navigate between pages
 
   // We create a state variable formData to store form input values
   const [formData, setFormData] = useState({
@@ -24,8 +27,8 @@ function Register() {
 
   const axiosHeaders = {
     headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*",
+        'Content-Type': 'application/json;charset=UTF-8',//used when sending data in JSON format to the server.
+        "Access-Control-Allow-Origin": "*",//I used it so that the web page can be accessed by an API from a different domain.
     }
   };
 
